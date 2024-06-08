@@ -97,3 +97,12 @@
 .register-link p a:hover {
     text-decoration: underline;
 }
+
+.success-message {
+    color: #fff;
+    font-weight: bold;
+    margin-top: 12px;
+    text-align: center;
+    text-shadow: -0.5opx -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000; /* Black outline */
+  }
+  
