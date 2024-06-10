@@ -27,7 +27,7 @@ const HomePage = () => {
         setError(null);
 
         try {
-            const res = await axios.post('https://8a3f-34-138-26-197.ngrok-free.app/pred', formData, {
+            const res = await axios.post('https://9dc3-35-237-173-106.ngrok-free.app/pred', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
@@ -47,6 +47,7 @@ const HomePage = () => {
                     <ul>
                         <li><Link to="/history">History</Link></li>
                         <li><Link to="/dashboard">Working</Link></li>
+                        <li><Link to="/about">About</Link></li>
                         <li><Link to="/">Logout</Link></li>
                     </ul>
                 </div>
@@ -58,7 +59,9 @@ const HomePage = () => {
                 <button className="upload" onClick={handleUpload} disabled={loading}>
                     {loading ? "Uploading..." : "Upload"}
                 </button>
-                {loading && <Spinner />}  {/* Show spinner while loading */}
+                {loading && <div className="spinner-container">
+                        <Spinner />
+                    </div>}  {/* Show spinner while loading */}
                 {error && <div style={{ color: 'red' }}>Error: {error.message}</div>}
                 {response && (
                     <div>

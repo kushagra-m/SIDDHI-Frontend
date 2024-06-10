@@ -9,6 +9,7 @@ const History = () => {
                 <ul>
                     <li><Link to="/history">History</Link></li>
                     <li><Link to="/dashboard">Working</Link></li>
+                    <li><Link to="/about">About</Link></li>
                     <li><Link to="/">Logout</Link></li>
                 </ul>
             </div>
