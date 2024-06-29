@@ -27,7 +27,7 @@ const HomePage = () => {
         setError(null);
 
         try {
-            const res = await axios.post('https://9dc3-35-237-173-106.ngrok-free.app/pred', formData, {
+            const res = await axios.post('https://7a86-35-204-126-34.ngrok-free.app/pred', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
@@ -38,6 +38,12 @@ const HomePage = () => {
         } finally {
             setLoading(false);
         }
+        
+    };
+
+    const customStringify = (obj) => {
+        const jsonString = JSON.stringify(obj, null, 2);
+        return jsonString.replace(/['"]+/g, '');
     };
 
     return (
@@ -66,7 +72,7 @@ const HomePage = () => {
                 {response && (
                     <div>
                         <h2>Response</h2>
-                        <h2><pre>{JSON.stringify(response.prediction, null, 2)}</pre></h2>
+                        <h3>{customStringify(response.prediction)}</h3>
                     </div>
                 )}
             </div>
