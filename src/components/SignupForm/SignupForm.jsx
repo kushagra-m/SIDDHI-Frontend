@@ -3,6 +3,7 @@ import { useState } from "react";
 import './SignupForm.css';
 import { FaUser, FaLock } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import { FaAt } from "react-icons/fa";
 
 
 const SignupForm = () => {
@@ -20,9 +21,20 @@ const SignupForm = () => {
       <form onSubmit={handleSubmit}>
           <h1>Signup</h1>
           <div className="input-box">
-            <input type="text" placeholder="Username" required />
+            <input type="email" placeholder="Email" required />
+            <FaAt className="icon" />
+          </div>
+
+          <div className="input-box">
+            <input type="text" placeholder="First name" required />
             <FaUser className="icon" />
           </div>
+
+          <div className="input-box">
+            <input type="text" placeholder="Last name" required />
+            <FaUser className="icon" />
+          </div>
+
           <div className="input-box">
             <input type="password" placeholder="Password" required />
             <FaLock className="icon" />

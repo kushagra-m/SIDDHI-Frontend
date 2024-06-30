@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import './LoginForm.css';
 import { FaUser, FaLock } from "react-icons/fa";
+import { FaAt } from "react-icons/fa";
 
 
 const LoginForm = () => {
@@ -10,8 +11,8 @@ const LoginForm = () => {
       <form action="">
         <h1>Login</h1>
         <div className="input-box">
-          <input type="text" placeholder="Username" required />
-          <FaUser className="icon" />
+          <input type="email" placeholder="Email" required />
+          <FaAt className="icon" />
         </div>
         <div className="input-box">
           <input type="password" placeholder="Password" required />
